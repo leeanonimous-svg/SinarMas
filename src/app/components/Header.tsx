@@ -7,10 +7,13 @@ export function Header() {
           <div className="flex items-center">
             <a 
               href="#hero"
-              className="text-2xl tracking-tight hover:text-[#8BA91F] transition-colors"
-              style={{ fontFamily: 'var(--font-heading)' }}
+              className="flex items-center hover:opacity-80 transition-opacity"
             >
-              SINAR MAS
+              <img 
+                src="https://mma.prnasia.com/media2/1685848/Sinarmas_Agribusiness_Logo.jpg?p=medium600" 
+                alt="Sinar Mas Agribusiness and Food"
+                className="h-12 w-auto object-contain"
+              />
             </a>
           </div>
 
