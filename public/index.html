@@ -3,339 +3,911 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinar Mas Agribusiness and Food - Leading Global Agribusiness</title>
-  <meta name="description" content="Sinar Mas Agribusiness and Food - A leading global agribusiness operating across the palm oil value chain since 1938, part of the Sinar Mas Group through Golden Agri-Resources Ltd.">
+  <meta name="description" content="Sinar Mas Agribusiness and Food - Leading global agribusiness operating across the palm oil value chain since 1938">
   <link rel="canonical" href="https://www.sinarmas-agribusiness.com">
+  <title>Sinar Mas Agribusiness and Food | Leading Global Agribusiness Since 1938</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lime-green': '#C4D82E',
+            'lime-dark': '#8BA91F',
+          },
+          fontFamily: {
+            'heading': ['Bebas Neue', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  
-  <!-- Header / Navigation -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="nav-logo">
-          <a href="#hero">SINAR MAS</a>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      <nav class="flex items-center justify-between h-20" aria-label="Main navigation">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#hero" class="text-2xl tracking-tight hover:text-[#8BA91F] transition-colors font-heading">
+            SINAR MAS
+          </a>
         </div>
-        
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#business">Business</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#sustainability">Sustainability</a></li>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex items-center gap-8">
+          <li>
+            <a href="#about" class="text-sm uppercase tracking-wide hover:text-[#8BA91F] transition-colors font-body">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#business" class="text-sm uppercase tracking-wide hover:text-[#8BA91F] transition-colors font-body">
+              Business
+            </a>
+          </li>
+          <li>
+            <a href="#products" class="text-sm uppercase tracking-wide hover:text-[#8BA91F] transition-colors font-body">
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#impact" class="text-sm uppercase tracking-wide hover:text-[#8BA91F] transition-colors font-body">
+              Impact
+            </a>
+          </li>
+          <li>
+            <a href="#sustainability" class="text-sm uppercase tracking-wide hover:text-[#8BA91F] transition-colors font-body">
+              Sustainability
+            </a>
+          </li>
         </ul>
-        
-        <a href="#contact" class="btn-primary">Contact Us</a>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="bg-[#C4D82E] text-black px-6 py-3 text-sm uppercase tracking-wide hover:bg-[#8BA91F] transition-colors font-body">
+          Contact Us
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-bg">
-      <img src="https://www.smart-tbk.com/wp-content/uploads/2021/01/Alternative-Livelihood.jpg" alt="Sinar Mas Agribusiness facility">
-    </div>
-    
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Leading Global
-        <br>
-        <span class="text-accent">Agribusiness</span>
-      </h1>
-      
-      <p class="hero-subtitle">
-        Sinar Mas Agribusiness and Food — Operating across the palm oil value chain since 1938
-      </p>
-      
-      <div class="hero-buttons">
-        <a href="#about" class="btn-primary">Learn More</a>
-        <a href="#sustainability" class="btn-secondary">Sustainability</a>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center bg-black text-white mt-20">
+      <!-- Background Image -->
+      <div class="absolute inset-0 overflow-hidden">
+        <img 
+          src="https://www.smart-tbk.com/wp-content/uploads/2021/01/Alternative-Livelihood.jpg"
+          alt="Sinar Mas Agribusiness facility"
+          class="w-full h-full object-cover opacity-25"
+        />
       </div>
-    </div>
-    
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="section section-white">
-    <div class="container">
-      <div class="section-grid">
-        <div class="section-header">
-          <span class="section-label">Who We Are</span>
-          <h2 class="section-title">Company Overview</h2>
-        </div>
+      <!-- Content -->
+      <div class="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 text-center">
+        <h1 class="hero-title text-[clamp(3rem,8vw,7rem)] leading-[0.9] mb-8 uppercase tracking-tight font-heading">
+          Leading Global
+          <br />
+          <span class="text-[#C4D82E]">Agribusiness</span>
+        </h1>
         
-        <div class="section-content">
-          <p class="text-large">
-            Sinar Mas Agribusiness and Food is a leading global agribusiness company operating across the entire palm oil value chain. As part of the Sinar Mas Group through Golden Agri-Resources Ltd (GAR), we have been at the forefront of sustainable agricultural practices since 1938.
-          </p>
-          <p>
-            With operations spanning cultivation, processing, and distribution, we are committed to delivering high-quality products while maintaining environmental stewardship and social responsibility. Our integrated operations ensure traceability and sustainability from plantation to end consumer.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed opacity-90 font-body">
+          Sinar Mas Agribusiness and Food — Operating across the palm oil value chain since 1938
+        </p>
 
-  <!-- Business Areas Section -->
-  <section id="business" class="section section-black">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-label">What We Do</span>
-        <h2 class="section-title">Key Business Areas</h2>
+        <div class="flex items-center justify-center gap-4">
+          <a href="#about" class="bg-[#C4D82E] text-black px-8 py-4 text-sm uppercase tracking-wide hover:bg-white transition-colors font-body">
+            Learn More
+          </a>
+          <a href="#sustainability" class="border border-white text-white px-8 py-4 text-sm uppercase tracking-wide hover:bg-white hover:text-black transition-colors font-body">
+            Sustainability
+          </a>
+        </div>
       </div>
-      
-      <div class="business-grid">
-        <article class="business-card">
-          <div class="business-number">01</div>
-          <h3 class="business-title">Plantation</h3>
-          <p class="business-description">
-            Sustainable oil palm cultivation across Indonesia with advanced agricultural practices and community development programs.
-          </p>
-        </article>
-        
-        <article class="business-card">
-          <div class="business-number">02</div>
-          <h3 class="business-title">Processing</h3>
-          <p class="business-description">
-            State-of-the-art palm oil mills and refineries producing high-quality crude palm oil and refined products.
-          </p>
-        </article>
-        
-        <article class="business-card">
-          <div class="business-number">03</div>
-          <h3 class="business-title">Distribution</h3>
-          <p class="business-description">
-            Global distribution network delivering palm oil products to markets worldwide with full supply chain transparency.
-          </p>
-        </article>
-        
-        <article class="business-card">
-          <div class="business-number">04</div>
-          <h3 class="business-title">Research & Development</h3>
-          <p class="business-description">
-            Continuous innovation in agricultural technology, sustainability practices, and product development.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <!-- Products Section -->
-  <section id="products" class="section section-white">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-label">Our Products</span>
-        <h2 class="section-title">Palm Oil Products</h2>
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+        <span class="text-xs uppercase tracking-widest font-body">
+          Scroll
+        </span>
+        <div class="w-px h-12 bg-white"></div>
       </div>
-      
-      <div class="products-grid">
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Crude Palm Oil (CPO)</h3>
-            <p class="product-description">
-              High-quality crude palm oil extracted from fresh fruit bunches, used in food manufacturing and oleochemical industries.
-            </p>
-          </div>
-        </article>
-        
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Refined Palm Oil</h3>
-            <p class="product-description">
-              Refined, bleached, and deodorized palm oil products for cooking oil and food ingredient applications.
-            </p>
-          </div>
-        </article>
-        
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Palm Kernel Products</h3>
-            <p class="product-description">
-              Palm kernel oil and palm kernel meal for specialty fats, cosmetics, and animal feed industries.
-            </p>
-          </div>
-        </article>
-        
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Oleochemicals</h3>
-            <p class="product-description">
-              Sustainable oleochemical derivatives for personal care, detergents, and industrial applications.
-            </p>
-          </div>
-        </article>
-        
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Biodiesel</h3>
-            <p class="product-description">
-              Renewable biodiesel fuel contributing to clean energy solutions and reduced carbon emissions.
-            </p>
-          </div>
-        </article>
-        
-        <article class="product-card">
-          <div class="product-content">
-            <h3 class="product-title">Specialty Fats</h3>
-            <p class="product-description">
-              Customized specialty fats for confectionery, bakery, and industrial food processing.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Impact / Statistics Section -->
-  <section id="impact" class="section section-accent">
-    <div class="container">
-      <div class="section-header-center section-header-light">
-        <span class="section-label section-label-dark">Our Impact</span>
-        <h2 class="section-title section-title-dark">Achievements & Statistics</h2>
-      </div>
-      
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">500,000+</div>
-          <div class="stat-label">Hectares of Plantation</div>
-        </div>
-        
-        <div class="stat-card">
-          <div class="stat-number">85+</div>
-          <div class="stat-label">Years of Excellence</div>
-        </div>
-        
-        <div class="stat-card">
-          <div class="stat-number">200,000+</div>
-          <div class="stat-label">People Employed</div>
-        </div>
-        
-        <div class="stat-card">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">RSPO Certified Mills</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="bg-white py-24 md:py-32" id="about">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <header class="mb-16">
+          <div class="inline-block px-4 py-2 bg-[#C4D82E]/10 text-[#8BA91F] text-xs uppercase tracking-widest mb-4 font-body">
+            About Us
+          </div>
+          <h2 class="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] uppercase tracking-tight mb-6 font-heading">
+            Heritage of
+            <br />
+            Excellence
+          </h2>
+        </header>
 
-  <!-- Sustainability Section -->
-  <section id="sustainability" class="section section-black">
-    <div class="container">
-      <div class="section-grid">
-        <div class="section-header">
-          <span class="section-label">Commitment</span>
-          <h2 class="section-title">Sustainability Initiatives</h2>
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Content -->
+          <article>
+            <p class="text-lg md:text-xl leading-relaxed mb-6 font-body">
+              Sinar Mas Agribusiness and Food is one of the world's leading agribusiness groups, operating across the entire palm oil value chain since 1938.
+            </p>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 font-body">
+              As part of the Sinar Mas Group through Golden Agri-Resources Ltd., which is listed on the Singapore Exchange, we are committed to sustainable palm oil production that benefits communities, protects the environment, and delivers quality products globally.
+            </p>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8 font-body">
+              With decades of experience, we have grown into a fully integrated operation encompassing plantations, mills, refineries, and consumer brands, serving markets across Asia, Europe, and beyond.
+            </p>
+
+            <!-- Image -->
+            <div class="relative h-[400px] w-full">
+              <img
+                src="https://images.ft.com/v3/image/raw/https%3A%2F%2Fcms-image-bucket-productionv3-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com%2Fimages%2F0%2F1%2F4%2F4%2F19084410-3-eng-GB%2FCropped-1548536786RTS2ATG2.jpg?width=780&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=auto"
+                alt="Modern agricultural practices at Sinar Mas"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </article>
+
+          <!-- Timeline -->
+          <div>
+            <h3 class="text-2xl md:text-3xl uppercase tracking-tight mb-12 font-heading">
+              Our Journey
+            </h3>
+            
+            <div class="space-y-8">
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    1938
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Founded as part of the Sinar Mas Group
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    1996
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Golden Agri-Resources Ltd. listed on the Singapore Exchange
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    2011
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Implemented comprehensive NDPE policy framework
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    2015
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Achieved RSPO certification for sustainable palm oil
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    2020
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Reached 98% traceability to plantation
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 border-l-2 border-gray-200 pl-6 hover:border-[#C4D82E] transition-colors">
+                <div class="flex-shrink-0">
+                  <span class="text-3xl md:text-4xl text-[#C4D82E] font-heading">
+                    2023
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <p class="text-base md:text-lg leading-relaxed font-body">
+                    Leading sustainable palm oil production globally
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-        
-        <div class="section-content">
-          <p class="text-large">
-            Sustainability is at the core of our operations. We are committed to responsible palm oil production that protects the environment, respects human rights, and supports local communities.
+      </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="bg-black text-white py-24 md:py-32" id="business">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <header class="mb-16 text-center">
+          <div class="inline-block px-4 py-2 bg-[#C4D82E]/20 text-[#C4D82E] text-xs uppercase tracking-widest mb-4 font-body">
+            What We Do
+          </div>
+          <h2 class="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] uppercase tracking-tight font-heading">
+            Integrated Value Chain
+          </h2>
+        </header>
+
+        <!-- Business Areas Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="border border-gray-700 p-8 hover:border-[#C4D82E] transition-colors">
+            <h3 class="text-2xl md:text-3xl uppercase tracking-tight mb-4 font-heading">
+              Upstream Operations
+            </h3>
+            
+            <p class="text-gray-400 leading-relaxed mb-6 font-body">
+              Sustainable palm cultivation across thousands of hectares with a focus on environmental stewardship and community development.
+            </p>
+
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Extensive plantation management
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Advanced agricultural practices
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Smallholder partnership programs
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Biodiversity conservation
+                </span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="border border-gray-700 p-8 hover:border-[#C4D82E] transition-colors">
+            <h3 class="text-2xl md:text-3xl uppercase tracking-tight mb-4 font-heading">
+              Midstream Processing
+            </h3>
+            
+            <p class="text-gray-400 leading-relaxed mb-6 font-body">
+              State-of-the-art palm oil mills and refining facilities ensuring quality and efficiency throughout the production process.
+            </p>
+
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Modern milling operations
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Advanced refining technology
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Quality control systems
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Efficient supply chain
+                </span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="border border-gray-700 p-8 hover:border-[#C4D82E] transition-colors">
+            <h3 class="text-2xl md:text-3xl uppercase tracking-tight mb-4 font-heading">
+              Downstream Manufacturing
+            </h3>
+            
+            <p class="text-gray-400 leading-relaxed mb-6 font-body">
+              Production of consumer-ready products including cooking oil, margarine, shortening, and specialty fats for various industries.
+            </p>
+
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Branded consumer products
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Industrial food ingredients
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Custom formulations
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#C4D82E] mt-1 flex-shrink-0">•</span>
+                <span class="text-sm text-gray-300 font-body">
+                  Global distribution network
+                </span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="bg-gray-50 py-24 md:py-32" id="products">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <header class="mb-16">
+          <div class="inline-block px-4 py-2 bg-[#C4D82E]/10 text-[#8BA91F] text-xs uppercase tracking-widest mb-4 font-body">
+            Our Products
+          </div>
+          <h2 class="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] uppercase tracking-tight font-heading">
+            Quality Products
+          </h2>
+        </header>
+
+        <!-- Products Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="bg-white group">
+            <div class="aspect-square overflow-hidden bg-white">
+              <img
+                src="https://www.smart-tbk.com/wp-content/uploads/2025/06/Filma-Cooking-Oil.jpg"
+                alt="Cooking Oil"
+                class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl md:text-2xl uppercase tracking-tight mb-3 font-heading">
+                Cooking Oil
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed font-body">
+                High-quality refined cooking oil for households and food service industries. Our cooking oil products meet the highest standards of purity and taste, perfect for everyday cooking needs.
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-white group">
+            <div class="aspect-square overflow-hidden bg-white">
+              <img
+                src="https://www.smart-tbk.com/wp-content/uploads/2025/06/Filma-Margarine-Tub.jpg"
+                alt="Margarine"
+                class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl md:text-2xl uppercase tracking-tight mb-3 font-heading">
+                Margarine
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed font-body">
+                Premium margarine products for baking, cooking, and spreading. Our margarine range offers excellent taste, texture, and functionality for both consumer and industrial applications.
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-white group">
+            <div class="aspect-square overflow-hidden bg-white">
+              <img
+                src="https://www.goldenagri.com.sg/wp-content/uploads/2025/06/FILMA-Goodfry-Semi-Liquid-Frying-Oil.jpg"
+                alt="Shortening"
+                class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl md:text-2xl uppercase tracking-tight mb-3 font-heading">
+                Shortening
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed font-body">
+                Professional-grade shortening for bakery and confectionery industries. Delivers consistent performance, excellent texture, and superior results in baked goods and pastries.
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-white group">
+            <div class="aspect-square overflow-hidden bg-white">
+              <img
+                src="https://www.smart-tbk.com/wp-content/uploads/2025/06/i-soc-PCF-40.jpg"
+                alt="Specialty Fats"
+                class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl md:text-2xl uppercase tracking-tight mb-3 font-heading">
+                Specialty Fats
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed font-body">
+                Customized specialty fats for various industrial applications including confectionery, bakery, and food manufacturing. Tailored solutions to meet specific product requirements.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="bg-[#C4D82E] text-black py-24 md:py-32" id="impact">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <header class="mb-16 text-center">
+          <h2 class="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] uppercase tracking-tight mb-4 font-heading">
+            Our Impact
+          </h2>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto font-body">
+            Driving sustainable growth and positive change across communities and the environment
           </p>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              500,000+
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Hectares under management
+            </p>
+          </article>
+
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              98%
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Traceability to plantation
+            </p>
+          </article>
+
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              76
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Community empowerment projects
+            </p>
+          </article>
+
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              50+
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Countries served worldwide
+            </p>
+          </article>
+
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              RSPO
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Certified operations
+            </p>
+          </article>
+
+          <article class="text-center">
+            <div class="text-[clamp(2rem,4vw,3.5rem)] leading-none mb-3 font-heading">
+              1938
+            </div>
+            <p class="text-sm uppercase tracking-wide font-body">
+              Years of heritage
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="bg-white py-24 md:py-32" id="sustainability">
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 mb-24">
+          <!-- Content -->
+          <article>
+            <div class="inline-block px-4 py-2 bg-[#C4D82E]/10 text-[#8BA91F] text-xs uppercase tracking-widest mb-4 font-body">
+              Sustainability
+            </div>
+            <h2 class="text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] uppercase tracking-tight mb-6 font-heading">
+              Environmental
+              <br />
+              Commitment
+            </h2>
+            
+            <p class="text-lg leading-relaxed mb-6 font-body">
+              Sustainability is at the core of everything we do. We recognize that our long-term success depends on our ability to operate responsibly and minimize our environmental footprint while maximizing positive social impact.
+            </p>
+            
+            <p class="text-base text-gray-600 leading-relaxed mb-6 font-body">
+              Our sustainability framework encompasses environmental stewardship, social responsibility, and economic viability. We continuously invest in research and innovation to improve our practices and contribute to global sustainability goals.
+            </p>
+            
+            <p class="text-base text-gray-600 leading-relaxed font-body">
+              Through collaboration with international organizations, government agencies, and local communities, we work towards creating shared value and lasting positive change in the regions where we operate.
+            </p>
+          </article>
+
+          <!-- Image -->
+          <div class="relative h-[500px]">
+            <img
+              src="https://i.ytimg.com/vi/OzCPur4tBVQ/maxresdefault.jpg"
+              alt="Sustainable agriculture practices"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-8">
+              <p class="text-sm mb-1 uppercase tracking-widest font-body">RSPO</p>
+              <p class="text-3xl uppercase tracking-tight font-heading">Certified</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Initiatives -->
+        <div>
+          <h3 class="text-[clamp(2rem,4vw,3rem)] leading-[1.1] uppercase tracking-tight mb-12 text-center font-heading">
+            Sustainability Initiatives
+          </h3>
           
-          <ul class="sustainability-list">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                Responsible Sourcing & Traceability
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    98% traceability to plantation (TTP) by end-2022
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    NDPE policies across the palm supply chain
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Comprehensive mapping of critical palm suppliers in Indonesia
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    NDPE and traceability data externally assured by third party
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Strengthened readiness for EU Anti-Deforestation Regulation (EUDR)
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                Climate Action & Emissions
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Signatory to Agriculture Sector Roadmap to 1.5°C (COP27)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Target for all palm oil volumes to reach 'Delivering' status by 2025
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Over 90% 'Delivering' status for CPO and PKO achieved
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Implementing TCFD recommendations
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    First-time disclosure of scope 3 and LULUCF emissions
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Ongoing strategies to reduce greenhouse gas emissions
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                Transparency & Reporting
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Annual sustainability reporting with externally assured indicators
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Enhanced transparency on traceability and climate performance
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Regular disclosure of sustainability metrics
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                Community & Livelihoods
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    76 community economic empowerment projects across Indonesia
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Support for rural livelihoods through training and income diversification
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    37 MSMEs established through community programmes
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    MSME development for sustainable local economies
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                Environmental Protection & Fire Prevention
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Fire prevention programme covering over 100 villages (DMPA)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    GeoSMART app deployment detecting fire hotspots 3x faster
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Strengthened preparedness for El Niño-related fire and haze risks
+                  </span>
+                </li>
+              </ul>
+            </article>
+
+            <article class="border-t-4 border-[#C4D82E] pt-6">
+              <h4 class="text-xl md:text-2xl uppercase tracking-tight mb-6 font-heading">
+                NDPE Implementation
+              </h4>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    No Deforestation, No Peat, No Exploitation policies
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Comprehensive supply chain monitoring
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Protection of high conservation value forests
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#C4D82E] mt-1.5 flex-shrink-0 text-lg">•</span>
+                  <span class="text-sm text-gray-600 leading-relaxed font-body">
+                    Commitment to sustainable palm oil production
+                  </span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl uppercase tracking-tight mb-4 font-heading">
+            Sinar Mas
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed font-body">
+            Agribusiness and Food
+            <br />
+            Leading global agribusiness since 1938
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm uppercase tracking-widest mb-4 text-[#C4D82E] font-body">
+            Quick Links
+          </h4>
+          <ul class="space-y-2">
             <li>
-              <strong>No Deforestation:</strong> Zero deforestation policy protecting high conservation value forests and high carbon stock areas.
+              <a href="#about" class="text-sm text-gray-400 hover:text-white transition-colors font-body">
+                About Us
+              </a>
             </li>
             <li>
-              <strong>RSPO Certification:</strong> All our mills are certified by the Roundtable on Sustainable Palm Oil (RSPO).
+              <a href="#business" class="text-sm text-gray-400 hover:text-white transition-colors font-body">
+                Business Areas
+              </a>
             </li>
             <li>
-              <strong>Community Development:</strong> Supporting local communities through education, healthcare, and livelihood programs.
+              <a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors font-body">
+                Products
+              </a>
             </li>
             <li>
-              <strong>Biodiversity Conservation:</strong> Protecting wildlife corridors and endangered species habitats within our concessions.
+              <a href="#sustainability" class="text-sm text-gray-400 hover:text-white transition-colors font-body">
+                Sustainability
+              </a>
             </li>
-            <li>
-              <strong>Climate Action:</strong> Reducing greenhouse gas emissions through renewable energy and improved agricultural practices.
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-sm uppercase tracking-widest mb-4 text-[#C4D82E] font-body">
+            Contact
+          </h4>
+          <address class="not-italic text-sm text-gray-400 leading-relaxed font-body">
+            Golden Agri-Resources Ltd.
+            <br />
+            Singapore Exchange
+            <br />
+            <a href="mailto:info@sinarmas.com" class="hover:text-white transition-colors">
+              info@sinarmas.com
+            </a>
+          </address>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <h4 class="text-sm uppercase tracking-widest mb-4 text-[#C4D82E] font-body">
+            Certifications
+          </h4>
+          <ul class="space-y-2">
+            <li class="text-sm text-gray-400 font-body">
+              RSPO Certified
             </li>
-            <li>
-              <strong>Supply Chain Transparency:</strong> Full traceability from plantation to end product with digital monitoring systems.
+            <li class="text-sm text-gray-400 font-body">
+              NDPE Compliant
+            </li>
+            <li class="text-sm text-gray-400 font-body">
+              ISO Standards
             </li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section section-white">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-content">
-          <h2 class="contact-title">Get In Touch</h2>
-          <p class="contact-description">
-            Interested in learning more about Sinar Mas Agribusiness and Food? Contact us for partnership opportunities, sustainability inquiries, or general information.
-          </p>
-          
-          <div class="contact-info">
-            <div class="contact-item">
-              <strong>Email:</strong> info@sinarmas-agri.com
-            </div>
-            <div class="contact-item">
-              <strong>Phone:</strong> +62 21 3000 8888
-            </div>
-            <div class="contact-item">
-              <strong>Address:</strong> Plaza BII Tower 2, Jl. M.H. Thamrin No.51, Jakarta, Indonesia
-            </div>
-          </div>
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-gray-500 font-body">
+          © 2025 Sinar Mas Agribusiness and Food. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="#privacy" class="text-xs text-gray-500 hover:text-white transition-colors font-body">
+            Privacy Policy
+          </a>
+          <a href="#terms" class="text-xs text-gray-500 hover:text-white transition-colors font-body">
+            Terms of Use
+          </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <h3>SINAR MAS</h3>
-          <p>Agribusiness and Food</p>
-        </div>
-        
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#business">Business Areas</a></li>
-              <li><a href="#products">Products</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h4>Sustainability</h4>
-            <ul>
-              <li><a href="#sustainability">Our Commitment</a></li>
-              <li><a href="#impact">Our Impact</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2026 Sinar Mas Agribusiness and Food. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Minimal JavaScript for smooth scrolling -->
   <script src="js/main.js"></script>
-  
 </body>
 </html>

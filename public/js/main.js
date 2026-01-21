@@ -1,28 +1,31 @@
-/**
- * Main JavaScript for Sinar Mas Agribusiness Website
- * Minimal JavaScript for smooth scrolling and simple interactions
- */
-
-(function() {
-  'use strict';
-
-  // Smooth scroll for anchor links (fallback for older browsers)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scroll behavior for anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scroll for all internal links
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       
-      // Don't prevent default if it's just #
-      if (targetId === '#') return;
+      // Skip if it's just "#"
+      if (targetId === '#') {
+        e.preventDefault();
+        return;
+      }
       
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
         e.preventDefault();
         
-        // Get header height for offset
-        const headerHeight = document.querySelector('.header').offsetHeight;
+        // Get the header height for offset
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        
+        // Calculate position
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         
+        // Smooth scroll to target
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -30,44 +33,33 @@
       }
     });
   });
-
-  // Header shadow on scroll
-  let lastScrollTop = 0;
-  const header = document.querySelector('.header');
   
-  window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // Add active state to navigation links based on scroll position
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  
+  function updateActiveLink() {
+    const scrollPosition = window.scrollY + 100; // Offset for header
     
-    if (scrollTop > 100) {
-      header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-    
-    lastScrollTop = scrollTop;
-  });
-
-  // Fade in scroll indicator on page load
-  window.addEventListener('load', function() {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator) {
-      scrollIndicator.style.opacity = '0.6';
-    }
-  });
-
-  // Hide scroll indicator when scrolling down
-  window.addEventListener('scroll', function() {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator) {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
       
-      if (scrollTop > 100) {
-        scrollIndicator.style.opacity = '0';
-        scrollIndicator.style.transition = 'opacity 0.3s ease';
-      } else {
-        scrollIndicator.style.opacity = '0.6';
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('text-[#8BA91F]');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('text-[#8BA91F]');
+          }
+        });
       }
-    }
-  });
-
-})();
+    });
+  }
+  
+  // Update active link on scroll
+  window.addEventListener('scroll', updateActiveLink);
+  
+  // Initial update
+  updateActiveLink();
+});
