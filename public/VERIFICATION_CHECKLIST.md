@@ -94,6 +94,8 @@ All images use absolute URLs and should load:
 5. Product 3: `https://www.goldenagri.com.sg/wp-content/uploads/2025/06/FILMA-Goodfry-Semi-Liquid-Frying-Oil.jpg`
 6. Product 4: `https://www.smart-tbk.com/wp-content/uploads/2025/06/i-soc-PCF-40.jpg`
 7. Sustainability: `https://i.ytimg.com/vi/OzCPur4tBVQ/maxresdefault.jpg`
+8. Header Logo: `https://mma.prnasia.com/media2/1685848/Sinarmas_Agribusiness_Logo.jpg?p=medium600`
+9. Favicon: `https://e7.pngegg.com/pngimages/500/24/png-clipart-sinar-mas-group-sinar-mas-land-bumi-serpong-damai-insurance-security-bank-company-text-thumbnail.png`
 
 ## ⚡ Expected Result
 
